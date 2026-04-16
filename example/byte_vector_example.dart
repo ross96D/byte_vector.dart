@@ -1,7 +1,7 @@
 import 'package:byte_vector/byte_vector.dart';
 
 void main() {
-  final bytes = ByteVector();
+  final bytes = ByteVector.empty();
   bytes.add(1);
   bytes.add(2);
   bytes.add(3);
