@@ -1,0 +1,20 @@
+name: byte_vector
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.11.4
+
+# Add regular dependencies here.
+dependencies:
+  ffi: ^2.2.0
+  ffigen: ^20.1.1
+  hooks: ^1.0.2
+  logging: ^1.3.0
+  native_toolchain_c: ^0.17.6
+  # path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
