@@ -12,6 +12,18 @@ static void bv_grow(ByteVector *bv) {
   bv->cap = new_capacity;
 }
 
+void bv_expand_length(ByteVector *bv, size_t expand) {
+    size_t new_len = bv->len + expand;
+    if (new_len >= bv->cap) {
+        size_t new_cap = new_len + 2 / 2;
+        if (new_cap > bv->cap) {
+            bv->cap = new_cap;
+        }
+        bv_grow(bv);
+    }
+    bv->len = new_len;
+}
+
 ByteVector *bv_create(void) {
   return bv_create_with_capacity(INITIAL_CAPACITY);
 }

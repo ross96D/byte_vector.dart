@@ -13,6 +13,9 @@ external ffi.Pointer<ByteVector> bv_create_with_capacity(int capacity);
 @ffi.Native<ffi.Void Function(ffi.Pointer<ByteVector>)>()
 external void bv_destroy(ffi.Pointer<ByteVector> bv);
 
+@ffi.Native<ffi.Void Function(ffi.Pointer<ByteVector>, ffi.Size)>()
+external void bv_expand_length(ffi.Pointer<ByteVector> bv, int expand);
+
 @ffi.Native<ffi.Void Function(ffi.Pointer<ByteVector>, ffi.Uint8)>()
 external void bv_push(ffi.Pointer<ByteVector> bv, int byte);
 

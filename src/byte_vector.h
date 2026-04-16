@@ -14,6 +14,8 @@ ByteVector *bv_create(void);
 ByteVector *bv_create_with_capacity(size_t capacity);
 void bv_destroy(ByteVector *bv);
 
+void bv_expand_length(ByteVector *bv, size_t expand);
+
 void bv_push(ByteVector *bv, uint8_t byte);
 uint8_t bv_pop(ByteVector *bv);
 uint8_t bv_get(const ByteVector *bv, size_t index);
